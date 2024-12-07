@@ -91,6 +91,26 @@ export default function TabTwoScreen() {
           ),
         })}
       </Collapsible>
+      <Collapsible title="Teste">
+        <ThemedText>
+          Ta isso ser um teste{' '}
+          <ThemedText type="defaultSemiBold">Bem Legal()</ThemedText> 
+        </ThemedText>
+        <ExternalLink href="https://docs.expo.dev/develop/user-interface/color-themes/">
+          <ThemedText type="link">Learn more</ThemedText>
+        </ExternalLink>
+      </Collapsible>
+      <Collapsible title="Images BRASIL">
+        <ThemedText>
+          E tem imagens <ThemedText type="defaultSemiBold">EFEITO ESPECIAL</ThemedText> e{' '}
+          <ThemedText type="defaultSemiBold">EFEITO ESPECIAL</ThemedText> isso eu entendi
+        </ThemedText>
+        <ThemedText>Transformei a imagem em um link usando o External Link</ThemedText>
+        <ExternalLink href="https://reactnative.dev/docs/images">
+        <Image source={require('@/assets/images/2-bandeira-do-brasil.webp')} style={{ alignSelf: 'center' }} />
+
+        </ExternalLink>
+      </Collapsible>
     </ParallaxScrollView>
   );
 }
@@ -103,7 +123,12 @@ const styles = StyleSheet.create({
     position: 'absolute',
   },
   titleContainer: {
+    color: '#fff',
     flexDirection: 'row',
     gap: 8,
   },
+  Padrao: {
+    fontFamily: 'Arial',
+    color: '#808080',
+  }
 });

@@ -73,6 +73,8 @@ const styles = StyleSheet.create({
   stepContainer: {
     gap: 8,
     marginBottom: 8,
+    backgroundColor: '#1515',
+    borderRadius: '15px',
   },
   reactLogo: {
     height: 178,
