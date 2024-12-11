@@ -1,7 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { useColorScheme } from 'react-native';
 
-// Definindo as cores para os temas claro e escuro
 const lightTheme = {
   background: '#ffffff',
   text: '#000000',
@@ -20,10 +19,10 @@ const darkTheme = {
   codeText: '#c3e88d',
 };
 
-// Criando o contexto de tema
+
 const ThemeContext = createContext();
 
-// Provedor do tema
+
 export const ThemeProvider = ({ children }) => {
   const systemTheme = useColorScheme();
   const [theme, setTheme] = useState(systemTheme === 'dark' ? darkTheme : lightTheme);
@@ -39,5 +38,5 @@ export const ThemeProvider = ({ children }) => {
   );
 };
 
-// Hook para acessar o tema
+
 export const useTheme = () => useContext(ThemeContext);
