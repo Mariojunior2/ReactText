@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 const Stack = createNativeStackNavigator();
 
 export default function TutorialPage() {
-  const theme = useColorScheme(); // 'dark' ou 'light'
+  const theme = useColorScheme();
   const isDark = theme === 'dark';
 
 
@@ -19,7 +19,7 @@ export default function TutorialPage() {
       fontWeight: 'bold',
       marginBottom: 20,
       color: isDark ? '#ffffff' : '#000000',
-      textAlign: 'center', // Centraliza o texto do título
+      textAlign: 'center', 
     },
     sectionTitle: {
       fontSize: 22,
@@ -27,13 +27,13 @@ export default function TutorialPage() {
       marginTop: 20,
       marginBottom: 10,
       color: isDark ? '#90caf9' : '#1e88e5',
-      textAlign: 'center', // Centraliza o texto do título da seção
+      textAlign: 'center', 
     },
     paragraph: {
       fontSize: 16,
       lineHeight: 24,
       color: isDark ? '#e0e0e0' : '#333333',
-      textAlign: 'center', // Centraliza o texto do parágrafo
+      textAlign: 'center', 
     },
     codeBlock: {
       fontFamily: 'monospace',
@@ -42,7 +42,7 @@ export default function TutorialPage() {
       borderRadius: 5,
       marginBottom: 15,
       color: isDark ? '#c3e88d' : '#2c3e50',
-      // textAlign: 'center' não é aplicado aqui
+
     },
     sectionContainer: {
       backgroundColor: isDark ? '#121212' : '#ffffff',
@@ -52,203 +52,70 @@ export default function TutorialPage() {
       backgroundColor: isDark ? '#121212' : '#ffffff',
       padding: 20,
       borderRadius: 10,
-      textAlign: 'center', // Centraliza o texto da conclusão
+      textAlign: 'center', 
     },
   });
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      <View style={styles.sectionContainer}>
-        <Text style={styles.title}>Guia Completo do Projeto Expo</Text>
-        <Text style={styles.paragraph}>
-          Bem-vindo ao nosso tutorial sobre o Expo! Vamos explorar juntos essa poderosa ferramenta para desenvolver aplicativos móveis usando JavaScript e React.
-        </Text>
+    <ScrollView contentContainerStyle={styles.container}> <View style={styles.sectionContainer}> <Text style={styles.title}>Guia Completo do Projeto Expo</Text> <Text style={styles.paragraph}> Bem-vindo ao nosso tutorial sobre o Expo! Vamos explorar juntos essa poderosa ferramenta para desenvolver aplicativos móveis usando JavaScript e React. </Text>
 
-        <Text style={styles.sectionTitle}>O que é o Expo?</Text>
-        <Text style={styles.paragraph}>
-          O Expo é um framework e uma plataforma para aplicações universais em React. Com ele, você pode criar aplicativos móveis para iOS e Android usando um único código base em JavaScript.
-        </Text>
+<Text style={styles.sectionTitle}>O que é o Expo?</Text> <Text style={styles.paragraph}> O Expo é um framework e uma plataforma para aplicações universais em React. Com ele, você pode criar aplicativos móveis para iOS e Android usando um único código base em JavaScript. </Text>
 
-        <Text style={styles.sectionTitle}>Instalando o Expo CLI</Text>
-        <Text style={styles.paragraph}>
-          Primeiro, vamos instalar o Expo CLI. Você precisa ter o Node.js instalado. No terminal, execute o seguinte comando:
-        </Text>
-        <Text style={styles.codeBlock}>
-          npm install -g expo-cli
-        </Text>
+<Text style={styles.sectionTitle}>Instalando o Expo CLI</Text> <Text style={styles.paragraph}> Primeiro, vamos instalar o Expo CLI. Você precisa ter o Node.jsinstalado. No terminal, execute o seguinte comando: </Text> <Text style={styles.codeBlock}> npm install -g expo-cli </Text>
 
-        <Text style={styles.sectionTitle}>Criando um novo projeto Expo</Text>
-        <Text style={styles.paragraph}>
-          Para criar um novo projeto Expo, execute:
-        </Text>
-        <Text style={styles.codeBlock}>
-          expo init my-new-project
-        </Text>
-        <Text style={styles.paragraph}>
-          Navegue até o diretório do projeto e inicie o servidor de desenvolvimento:
-        </Text>
-        <Text style={styles.codeBlock}>
-          cd my-new-project
-          expo start
-        </Text>
+<Text style={styles.sectionTitle}>Criando um novo projeto Expo</Text> <Text style={styles.paragraph}> Para criar um novo projeto Expo, execute: </Text> <Text style={styles.codeBlock}> expo init my-new-project </Text> <Text style={styles.paragraph}> Navegue até o diretório do projeto e inicie o servidor de desenvolvimento: </Text> <Text style={styles.codeBlock}> cd my-new-project expo start </Text>
 
-        <Text style={styles.sectionTitle}>Estrutura de Diretórios</Text>
-        <Text style={styles.paragraph}>
-          Um projeto Expo tem uma estrutura de diretórios bastante organizada. Aqui estão os diretórios mais importantes:
-        </Text>
-        <Text style={styles.paragraph}>
-          - **assets/**: Contém imagens, fontes e outros ativos usados no aplicativo.
-          - **components/**: Componentes React reutilizáveis.
-          - **screens/**: Componentes de tela para a navegação.
-          - **App.js**: O ponto de entrada principal do seu aplicativo.
-        </Text>
+<Text style={styles.sectionTitle}>Estrutura de Diretórios</Text> <Text style={styles.paragraph}> Um projeto Expo tem uma estrutura de diretórios bastante organizada. Aqui estão os diretórios mais importantes: </Text> <Text style={styles.paragraph}> - assets/: Contém imagens, fontes e outros ativos usados no aplicativo. - components/: Componentes React reutilizáveis. - screens/: Componentes de tela para a navegação. - App.js: O ponto de entrada principal do seu aplicativo. </Text>
 
-        <Text style={styles.sectionTitle}>Adicionando Navegação</Text>
-        <Text style={styles.paragraph}>
-          Para adicionar navegação, você pode usar a biblioteca React Navigation. Instale-a com:
-        </Text>
-        <Text style={styles.codeBlock}>
-          npm install @react-navigation/native
-          npm install @react-navigation/native-stack
-          expo install react-native-screens react-native-safe-area-context
-        </Text>
-        <Text style={styles.paragraph}>
-          Em seguida, configure sua navegação no arquivo App.js:
-        </Text>
-        <Text style={styles.codeBlock}>
-          {`import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import HomeScreen from './screens/HomeScreen';
-import DetailsScreen from './screens/DetailsScreen';
+<Text style={styles.sectionTitle}>Adicionando Navegação</Text> <Text style={styles.paragraph}> Para adicionar navegação, você pode usar a biblioteca React Navigation. Instale-a com: </Text> <Text style={styles.codeBlock}> npm install @react-navigation/native npm install @react-navigation/native-stack expo install react-native-screens react-native-safe-area-context </Text> <Text style={styles.paragraph}> Em seguida, configure sua navegação no arquivo App.js: </Text> <Text style={styles.codeBlock}> {`import * as React from 'react'; import { NavigationContainer } from '@react-navigation/native'; import { createNativeStackNavigator } from '@react-navigation/native-stack'; import HomeScreen from './screens/HomeScreen'; import DetailsScreen from './screens/DetailsScreen';
 
 const Stack = createNativeStackNavigator();
 
-export default function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Details" component={DetailsScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}`}
-        </Text>
+export default function App() { return ( <NavigationContainer> <Stack.Navigator initialRouteName="Home"> <Stack.Screen name="Home" component={HomeScreen} /> <Stack.Screen name="Details" component={DetailsScreen} /> </Stack.Navigator> </NavigationContainer> ); }`} </Text>
 
-        <Text style={styles.sectionTitle}>Usando Temas Globais</Text>
-        <Text style={styles.paragraph}>
-          Agora, vamos criar um modo global de cor que se adapta ao tema do sistema operacional. Crie um arquivo chamado `theme.js`:
-        </Text>
-        <Text style={styles.codeBlock}>
-          {`import { useColorScheme } from 'react-native';
+<Text style={styles.sectionTitle}>Usando Temas Globais</Text> <Text style={styles.paragraph}> Agora, vamos criar um modo global de cor que se adapta ao tema do sistema operacional. Crie um arquivo chamado theme.js: </Text> <Text style={styles.codeBlock}> {`import { useColorScheme } from 'react-native';
 
-export function useTheme() {
-  const theme = useColorScheme();
-  const isDark = theme === 'dark';
+export function useTheme() { const theme = useColorScheme(); const isDark = theme === 'dark';
 
-  return {
-    isDark,
-    theme: {
-      background: isDark ? '#121212' : '#ffffff',
-      text: isDark ? '#ffffff' : '#000000',
-    },
-  };
-}
+return { isDark, theme: { background: isDark ? '#121212' : '#ffffff', text: isDark ? '#ffffff' : '#000000', }, }; }
 
-export function ThemeProvider({ children }) {
-  const theme = useTheme();
+export function ThemeProvider({ children }) { const theme = useTheme();
 
-  return (
-    <ThemeContext.Provider value={theme}>
-      {children}
-    </ThemeContext.Provider>
-  );
-}
+return ( <ThemeContext.Provider value={theme}> {children} </ThemeContext.Provider> ); }
 
-export const ThemeContext = React.createContext();`}
-        </Text>
-        <Text style={styles.paragraph}>
-          Em seguida, aplique o tema global em seus componentes, conforme necessário.
-        </Text>
+export const ThemeContext = React.createContext();`} </Text> <Text style={styles.paragraph}> Em seguida, aplique o tema global em seus componentes, conforme necessário. </Text>
 
-        <Text style={styles.sectionTitle}>Conclusão</Text>
-        <Text style={styles.paragraph}>
-          E é isso! Agora você tem um guia completo sobre o Expo, e seu aplicativo está configurado para adaptar automaticamente ao tema do sistema operacional. Continue explorando e criando coisas incríveis!
-        </Text>
+<Text style={styles.sectionTitle}>Configuração do Servidor</Text> <Text style={styles.codeBlock}> {`const express = require('express'); const http = require('http'); const { Server } = require('socket.io'); const cors = require('cors');
 
-        <Text style={styles.sectionTitle}>Dicionário de Componentes e Funções</Text>
-        <Text style={styles.paragraph}>
-          Vamos detalhar o que cada parte do código faz:
-        </Text>
+const app = express(); app.use(cors());
 
-        <Text style={styles.sectionTitle}>Componentes e Funções</Text>
+const server = http.createServer(app); const io = new Server(server, { cors: { origin: "*", methods: ["GET", "POST"], allowedHeaders: ["Content-Type"], credentials: true, }, });
 
-        <Text style={styles.sectionTitle}>import</Text>
-        <Text style={styles.paragraph}>
-          Importa componentes necessários do React Native e do React Navigation.
-        </Text>
+server.listen(8080, () => { console.log('Servidor Socket.IO rodando na porta 8080...'); });
 
-        <Text style={styles.sectionTitle}>createNativeStackNavigator</Text>
-        <Text style={styles.paragraph}>
-          Cria um stack navigator para navegação entre telas.
-        </Text>
+io.on('connection', (socket) => { console.log('Novo cliente conectado!');
 
-        <Text style={styles.sectionTitle}>useColorScheme</Text>
-        <Text style={styles.paragraph}>
-          Detecta o tema atual do sistema (claro ou escuro).
-        </Text>
+socket.on('message', (message) => { console.log(\Mensagem recebida: \${message}\); io.emit('message', message); });
 
-        <Text style={styles.sectionTitle}>useTheme</Text>
-        <Text style={styles.paragraph}>
-          Customiza os temas claro e escuro para toda a aplicação.
-        </Text>
+socket.on('disconnect', () => { console.log('Cliente desconectado!'); }); });} </Text> <Text style={styles.paragraph}> Este código configura o servidor usando Express e Socket.IO: </Text> <Text style={styles.paragraph}> - **express**: Importa o módulo Express para criar um servidor HTTP. - **http**: Importa o módulo HTTP do Node.js para criar o servidor. - **{ Server } = require('socket.io')**: Importa o móduloServer do Socket.IO para comunicação em tempo real. - cors: Importa o módulo CORS para permitir solicitações de origens diferentes. - app = express(): Cria uma instância do servidor Express. - app.use(cors()): Aplica o middleware CORS ao servidor Express. - server = http.createServer(app): Cria um servidor HTTP usando a instância Express. - io = new Server(server, {...}): Cria uma instância do servidor Socket.IO com configurações de CORS. - server.listen(8080, () => {...}): Faz o servidor HTTP escutar na porta 8080 e exibe uma mensagem quando iniciado. - io.on('connection', (socket) => {...}): Configura um evento de conexão para o Socket.IO. - socket.on('message', (message) => {...}): Configura um evento para ouvir mensagens do cliente e retransmitir para todos os clientes conectados. - socket.on('disconnect', () => {...}): Configura um evento para detectar quando um cliente se desconecta e exibe uma mensagem no console.`} </Text>
 
-        <Text style={styles.sectionTitle}>NavigationContainer</Text>
-        <Text style={styles.paragraph}>
-          Provedor de navegação que contém o estado de navegação.
-        </Text>
+<Text style={styles.sectionTitle}>Configuração do Cliente</Text> <Text style={styles.codeBlock}> {`import React, { useEffect, useState, useRef } from 'react'; import { View, TextInput, Button, FlatList, Text, StyleSheet } from 'react-native'; import io, { Socket } from 'socket.io-client';
 
-        <Text style={styles.sectionTitle}>ScrollView</Text>
-        <Text style={styles.paragraph}>
-          Permite rolar o conteúdo na tela.
-        </Text>
+type Message = { id: string; text: string; };
 
-        <Text style={styles.sectionTitle}>Text</Text>
-        <Text style={styles.paragraph}>
-          Exibe texto na tela.
-        </Text>
+export default function Chat() { const [messages, setMessages] = useState<Message[]>([]); const [message, setMessage] = useState(''); const socket = useRef<Socket | null>(null);
 
-        <Text style={styles.sectionTitle}>View</Text>
-        <Text style={styles.paragraph}>
-          Contêiner básico para layouts, que pode conter outros componentes.
-        </Text>
+useEffect(() => { socket.current= io('https://YOUR_NGROK_URL_HERE'); // Substitua pela URL do ngrok
 
-        <Text style={styles.sectionTitle}>StyleSheet</Text>
-        <Text style={styles.paragraph}>
-          Cria estilos para os componentes.
-        </Text>
-        <Text style={styles.codeBlock}> {`  const styles = StyleSheet.create({
-    container: {
-        padding: 20,
-        backgroundColor: isDark ? '#121212' : '#ffffff',
-        minHeight: '100%',
-      },
+socket.current.on('connect', () => { console.log('Conectado ao servidor'); });
 
-    }); // Tudo isto sendo um exemplo`} 
-        </Text>
+socket.current.on('message', (newMessage) => { console.log('Nova mensagem recebida:', newMessage); setMessages((prevMessages) => [...prevMessages, { id: Date.now().toString(), text: newMessage }]); });
 
+return () => { socket.current?.disconnect(); }; }, []);
 
-        <Text style={styles.sectionTitle}>ThemeContext</Text>
-        <Text style={styles.paragraph}>
-          Contexto para acessar e definir o tema global.
-        </Text>
+const sendMessage = () => { if (message.trim() !== '' && socket.current) { console.log('Enviando mensagem:', message); const newMessage = { id: Date.now().toString(), text: message }; setMessages((prevMessages) => [...prevMessages, newMessage]); socket.current.emit('message', message); setMessage(''); } };
 
-        <Text style={styles.sectionTitle}>Button</Text>
-        <Text style={styles.paragraph}>
-          Um botão clicável.
-        </Text>
-      </View>
-    </ScrollView>
-  );
-}
+return ( <View style={styles.container}> <FlatList data={messages} renderItem={({ item }) => <Text style={styles.message}>{item.text}</Text>} keyExtractor={(item) => item.id} extraData={messages} /> <TextInput style={styles.input} value={message} onChangeText={setMessage} placeholder="Digite sua mensagem" /> <Button title="Enviar" onPress={sendMessage} /> </View> );`}</Text>
+</View>
+</ScrollView>
+)};
